@@ -1,0 +1,16 @@
+* {
+    outline: none;
+    font-family: inherit;
+}
+
+*, ::before, ::after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    cursor: default;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+}
