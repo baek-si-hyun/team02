@@ -1,0 +1,44 @@
+div.appwrapper{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+div.top{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 88px;
+    padding: 48px 0px 16px;
+    background-color: rgb(2, 74, 149);
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    z-index: 4000;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: top 100ms linear 0s;
+}
+
+div.layout_top_banner{
+    background-color: rgb(122, 40, 250);
+    height: 56px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+div.top_center_banner{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    max-width: 930px;
+    position: relative;
+}
