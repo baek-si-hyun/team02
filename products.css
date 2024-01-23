@@ -11,6 +11,718 @@
 html {
     box-sizing: border-box;
     cursor: default;
+    font-family: sans-serif;
     line-height: 1.5;
+    -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+    width: 100%;
+    font-size: 14px;
+    color: black;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+}
+
+a, area, button, input, label, select, textarea, [tabindex] {
+    /* -ms-touch-action: manipulation; */
+    touch-action: manipulation;
+}
+
+a, area, button, input, label, select, textarea, [tabindex] {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, input, select, textarea {
+    background-color: transparent;
+    border-style: none;
+    color: inherit;
+    font-size: 1em;
+    margin: 0;
+}
+
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+
+/* 'search' 타입인 input 태그의 스타일 지정 */
+/* [type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+} */
+
+body {
+    margin: 0;
+    font-family: SUIT, "UI Frip", "Noto Sans KR", Helvetica, Arial, sans-serif;
+}
+
+body.font-loaded {
+    font-family: SUIT, "UI Frip", "Noto Sans KR", Helvetica, Arial, sans-serif;
+}
+
+img {
+    border-style: none;
+}
+
+/* body.font-loaded 의 하위 요소 */
+#app {
+    background-color: white;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/* #app 의 하위 요소 */
+.app-wrapper {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+/* .app-wrapper 의 하위 요소 */
+.layout-top-banner {
+    background-color: rgb(122, 40, 250);
+    height: 56px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+/* layout-top-banner 의 하위 요소 */
+.layout-top-banner-content {
+    -webkit-box-align: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 930px;
+    position: relative;
+}
+
+.layout-top-banner-content a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.layout-top-banner-content a img {
+    width: 100%;
+}
+
+/* layout-top-banner-content 의 하위 요소 */
+.layout-top-banner-close-btn {
+    cursor: pointer;
+    width: 100%;
+    max-width: 32px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.layout-top-banner-close-btn img {
+    width: 16px;
+}
+
+/* .app-wrapper 의 하위 요소 */
+.global-navigation-bar {
+    width: 100%;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    z-index: 300;
+}
+
+/* .global-navigation-bar 의 하위 요소 */
+.top-nav-container {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 32px;
+    background-color: rgb(244, 244, 244);
+}
+
+/* .top-nav-container 의 하위 요소 */
+.top-nav-menu-wrapper {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    max-width: 768px;
+    width: 100%;
+    padding: 6px 20px;
+}
+
+/* .top-nav-menu-wrapper 의 하위 요소 */
+.top-nav-menu-node-list-wrapper {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+/* .top-nav-menu-node-list-wrapper 의 하위에 있는 a 태그에 적용 */
+.top-nav-menu-node-list-wrapper a {
+    margin-left: 20px;
+}
+
+/*
+    .top-nav-menu-node-list-wrapper 의 하위에 있는
+    첫 번째 a 태그에만 적용
+*/
+.top-nav-menu-node-list-wrapper a:first-child {
+    margin-left: 0;
+}
+
+/* .top-nav-menu-node-list-wrapper 의 하위 요소 */
+.withlink-styled-a {
+    min-height: 1px;
+}
+
+/* 화면 상단 내비게이션 영역 내 a 태그들의 최소 높이를 1px로 지정 */
+.withlink-styled-link {
+    min-height: 1px;
+}
+
+/*
+    화면 최상단 회색 영역 내 내비게이션 메뉴들의 스타일 지정
+*/
+.top-nav-menu {
+    color: rgb(119, 119, 119);
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: -0.3px;
+}
+
+/* 화면 상단 아이콘 및 검색바가 위치한 공간의 스타일 지정 */
+.main-nav-container {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+
+/* .main-nav-container 의 하위 요소 */
+.main-nav-menu-wrapper {
+    position: relative;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    max-width: 768px;
+    width: 100%;
+    padding: 22px 20px 8px;
+}
+
+/* main-nav-menu-wrapper 의 하위 요소 */
+.main-menu-left-section {
+    display: flex;
+    width: 100%;
+}
+
+/* 내비게이션 메뉴 아이콘들이 있는 위치의 스타일 지정 */
+.main-nav-menu {
+    width: 48px;
+    height: 51px;
+}
+
+/* 내비게이션 아이콘들의 스타일 지정 */
+.icon-wrapper {
+    display: flex;
+    align-items: flex-end;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 34px;
+}
+
+/* 내비게이션 아이콘 아래 글자의 스타일 지정 */
+.main-label {
+    display: block;
+    margin-top: 3px;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: -0.3px;
+    text-align: center;
+    color: rgb(170, 170, 170);
+}
+
+/* '카테고리' 메뉴와 검색창 사이의 여백 및 스타일 지정 */
+.pipe {
+    width: 1px;
+    height: 38px;
+    background-color: rgb(238, 238, 238);
+    margin-top: 10px;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+/* FRIP 로고 들어갈 자리의 스타일 지정 */
+.main-logo {
+    margin: 17px 0px 17px 20px;
+    width: 68px;
+    height: 24px;
+}
+
+/* 검색창 위치의 스타일 지정 */
+.search-bar-wrapper {
+    height: 38px;
+    padding: 0px 14px;
+    margin-top: 10px;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+}
+
+/* 검색창을 한 번 더 wrapper로 감싸줌 */
+.inner-search-bar-wrapper {
+    width: 100%;
+}
+
+/* 검색창 스타일 지정 */
+.search-form {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 38px;
+    padding: 0px 12px;
+    border-radius: 19px;
+    background-color: rgb(244, 244, 244);
+    border: none;
+}
+
+/* 검색창 옆 돋보기 이미지의 스타일 지정 */
+.magnifier-img {
+    margin-right: 5px;
+    user-select: none;
+}
+
+/* 검색창 내 텍스트의 스타일 지정 */
+.search-input {
+    width: 100%;
+    color: rgb(51, 51, 51);
+    height: 24px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+/* 화면 상단 내비게이션 메뉴 우측의 아이콘 묶음들의 스타일 지정 */
+.main-menu-right-section {
+    display: flex;
+    width: 168px;
+}
+
+/* main 태그 내에서 사용할 전반적인 스타일 지정*/
+main.product-detail-page-wrapper {
+    width: 100%;
+    max-width: 828px;
+    min-height: 1px;
+    margin: 0px auto;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+/* main 태그 부분 중앙에 오는 모든 요소들의 스타일 지정 */
+.fade-wrapper {
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out 0s;
+    display: block;
+    opacity: 1;
+    min-width: 0px;
+    min-height: 1px;
+}
+
+/* main 태그 부분 중앙에 오는 모든 요소들을 아래 클래스클 가진 div 태그로 감싸줌 */
+.product-detail-page-content-wrapper {
+    position: relative;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex: 1 1 100%;
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+}
+
+/* 위 영역을 한 번 더 아래 클래스를 가진 div 태그로 감싸줌 */
+.product-detail-container {
+    display: flex;
+    flex-flow: column;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0px;
+    padding: 40px 30px 30px;
+}
+
+/* 
+    상품 이미지, 이름, 가격, 판매자 정보가 담긴 공간을 묶어주는 클래스
+*/
+.head-section-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    max-width: 768px;
+    padding-bottom: 24px;
+}
+
+/*
+    .head-section-wrapper 클래스를 가진 태그보다
+    하위에 있는 모든 요소들에 아래의 스타일 적용
+*/
+.head-section-wrapper > * {
+    width: 50%;
+    max-width: 375px;
+}
+
+/* 상품 이미지란의 스타일을 조정 */
+.representation-image-section-wrapper {
+    position: relative;
+    min-height: 1px;
+    text-align: center;
+}
+
+/* 
+    .slick-slider 클래스를 사용하는 div 태그의 스타일 지정
+    visibility 속성의 기본 값은 hidden 으로 설정
+*/
+.slick-slider {
+    visibility: hidden;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+/*
+    .slick-initialized 클래스를 가진 div 태그 내 요소들에 대하여
+    visibility 속성값을 visible 로 설정
+*/
+.slick-slider.slick-initialized {
+    visibility: visible;
+}
+
+/* 
+    .slick-slider 와 .slick-list 클래스를 가진 태그보다
+    하위에 있는 요소(이미지)의 모서리를 둥글게 조정
+*/
+.slick-slider .slick-list {
+    border-radius: 5px;
+}
+
+/*
+    하위 요소들에 position: absolute 속성을 적용하기 위해
+    position: relative 속성을 상위 태그인 이 클래스에 부여
+*/
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .slick-track 클래스를 사용하는 요소들의 앞, 뒤에 스타일 적용 */
+.slick-track:before, .slick-track:after {
+    display: table;
+    content: '';
+}
+
+/*  */
+.slick-track:after {
+    clear: both;
+}
+
+/* .slick-slide 클래스를 사용하는 요소들에 스타일 적용 */
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+/*
+    .slick-initialized 와 .slick-slide 클래스를 가진
+    요소들을 블록 요소로 만들어줌
+*/
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+/* 상품 이미지란에 적용할 스타일 지정 */
+.product-image-wrapper {
+    min-height: 1px;
+}
+
+/* .slick-slide 클래스를 사용한 요소보다
+    하위에 있는 img 태그는 블록 요소로 취급
+*/
+.slick-slide img {
+    display: block;
+}
+
+.styled-image-loader {
+    display: none !important;
+}
+
+/* 실제 사이트에 보일 이미지를 감쌀 클래스 */
+.inner-fade-wrapper {
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out 0s;
+    display: none;
+    opacity: 0;
+    min-width: 0px;
+    min-height: 1px;
+}
+
+.ratio-ratio {
+    height: 0px;
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+}
+
+.ratio-content {
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+/* 사이트 접속 시에 보일 이미지 스타일 조정 */
+.styled-image {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 상품 이미지 하단, 숫자를 표시할 공간의 스타일 작성 */
+.index-container {
+    width: 100%;
+    position: absolute;
+    bottom: 16px;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+}
+
+/* 숫자가 표시되는 곳의 스타일 작성 */
+.index-number {
+    padding: 6px 9px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+}
+
+/* 상품 이름, 가격, 판매자 정보가 담긴 공간을 묶어주는 클래스 */
+.info-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 0px 0px 0px 6px;
+}
+
+/* 위 클래스 내 요소들에 .section-wrapper 클래스를 부여하고,
+    해당 요소들의 기본 스타일 지정
+*/
+.section-wrapper {
+    border-bottom: 1px solid rgb(238, 238, 238);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    line-height: 1.8;
+    font-size: 14px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* 상품 이름, 가격 정보란의 스타일 작성 */
+.basic-info {
+    height: 100%;
+    position: relative;
+    padding: 0px 0px 12px;
+    border-bottom: initial;
+}
+
+/* 상품 이름을 감쌀 공간의 스타일 작성 */
+.product-title-wrapper {
+    width: 100%;
+    min-width: 0px;
+}
+
+/* 상품 제목의 스타일 작성 */
+.product-title {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+/*
+    아래의 상품 이름을 담을 요소의 클래스(.title)의 스타일을
+    지정하기 전에, 기초적인 작업을 미리 해둠
+*/
+.title-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 상품 이름 텍스트의 스타일 작성 */
+.title {
+    margin: 0px;
+    max-width: 320px;
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.6px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    color: rgb(51, 51, 51);
+}
+
+/* 상품 이름 옆 공유버튼 들어갈 공간의 스타일 지정 */
+.action-button-container {
+    white-space: nowrap;
+}
+
+/* 위 클래스보다 하위의 요소 모두에 margin 적용 */
+.action-button-container > * {
+    margin-right: 20px;
+}
+
+/* 단, 그 중 마지막 요소에는 margin 적용 안 함 */
+.action-button-container > :last-child {
+    margin-right: 0;
+}
+
+/* 공유 버튼에 들어갈 스타일 작성 */
+.button-share {
+    cursor: pointer;
+    padding: 0px;
+}
+
+/* 상품 가격이 들어갈 공간의 스타일 작성 */
+.price-info-wrapper {
+    display: flex;
+    -webkit-box-align: baseline;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+/* 상품 가격 텍스트(숫자)의 스타일 작성 */
+.price-info-price {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;
+    letter-spacing: -0.72px;
+    color: rgb(51, 51, 51);
+    margin-right: 6px;
+}
+
+/* 상품 가격 중, 단위 부분의 스타일 작성 */
+.price-unit {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+    color: rgb(51, 51, 51);
+}
+
+/*
+    section-wrapper 클래스를 사용하는 태그 중,
+    가장 마지막에 오는 태그에 해당 스타일 적용
+*/
+.section-wrapper:last-child{
+    border-bottom: initial;
+    padding-bottom: initial;
+}
+
+/* 상품 판매자 정보가 들어갈 공간의 스타일 작성 */
+.host-profile {
+    border-top: 1px solid rgb(238, 238, 238);
+    padding-right: 12px;
+}
+
+/* 상품 판매자 정보란을 감싸는 태그의 스타일 작성 */
+.profile-wrapper {
+    display: flex;
+    flex-flow: column;
+}
+
+/* 판매자 정보란의 스타일 작성 */
+.profile {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/* 판매자 이미지와 정보를 담는 공간의 스타일 작성 */
+.profile-info {
+    display: flex;
+    width: 100%;
+}
+
+/* 판매자 이미지를 담는 공간의 스타일 작성 */
+.profile-image {
+    margin-right: 20px;
+    overflow: hidden;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 28px;
+}
+
+/* 판매자의 프로필 이미지를 감쌀 공간의 스타일 작성 */
+.profile-image-wrapper {
+    min-height: 1px;
+}
+
+/* 프로필 이미지에 대한 스타일 작성 */
+.host-image {
+    display: initial;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
