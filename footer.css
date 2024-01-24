@@ -1,8 +1,21 @@
+@font-face {
+    font-family: "SUIT";
+    src: url('font/SUIT-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family:"SUIT-MEDIUM";
+    src: url('font/SUIT-Medium.otf') format('opentype');
+}
+
+
+
 
 /* footer */
 .footer-wrapper{
     padding: 40px 20px 96px;
     background-color: rgb(248, 248, 248);
+
 }
 
 .footer-content-wrapper{
@@ -99,6 +112,18 @@
     border-top: 1px solid rgb(238, 238, 238);
 }
 
+.center-section-cs-content{
+    color: rgb(119, 119, 119);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+}
+
+.center-section-cs-content p:first-child{
+    margin-top: 20px;
+}
+
 .center-section-border-2{
     margin-top: 30px;
     border-top: 1px solid rgb(238, 238, 238);
@@ -110,6 +135,7 @@
 }
 
 .footer-header{
+    font-family: "SUIT";
     padding-bottom: 20px;
     font-size: 16px;
     font-weight: bold;
@@ -133,7 +159,7 @@
 
 .footer-divider{
     display: inline-block;
-    padding: 0px 5px;
+    padding: 0px 2.5px;
     color: rgb(224, 224, 224);
     font-size: 10px;
     line-height: 1.54;
@@ -142,6 +168,7 @@
 .footer-content p{
     line-height: 1.36;
     margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 .footer-content a{
@@ -207,7 +234,7 @@
 }
 
 .footer-icon-button-group > * {
-    margin-left: 20px;
+    margin-left: 18px;
 }
 
 .with-link-styled-A{
@@ -224,5 +251,5 @@
 }
 
 .footer-icon-button-group-b > * {
-    margin-left: 20px;
+    margin-left: 18px;
 }
