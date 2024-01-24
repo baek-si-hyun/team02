@@ -199,7 +199,7 @@ div{
 }
 
 .global-navigation-bar-wrapper{
-    font: ;
+    font: SUIT;
     width: 100%;
     border-bottom: 1px solid rgb(238, 238, 238);
     z-index: 300;
@@ -362,7 +362,7 @@ div{
 }
 
 [type="search"] {
-    -webkit-appearance: textfield;
+    appearance: textfield;
     outline-offset: -2px;
 }
 
