@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "SUIT";
+    src: url('font/SUIT-Medium.otf') format('opentype');
+}
+
 * {
     background-repeat: no-repeat;
     box-sizing: inherit;
@@ -9,7 +14,6 @@
     background-repeat: no-repeat;
     box-sizing: inherit;
 }
-
 
 element.style {
     top: -88px;
@@ -41,6 +45,59 @@ div {
     display: block;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+input[type="search"]{
+    appearance: auto;
+    box-sizing: border-box;
+    padding-block: 1px;
+    padding-inline: 2px;
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+
+input {
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-variant-alternates: ;
+    font-variant-position: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    font-optical-sizing: ;
+    font-kerning: ;
+    font-feature-settings: ;
+    font-variation-settings: ;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
 
 a, area, button, input, label, select, textarea, [tabindex] {
     -ms-touch-action: manipulation;
@@ -65,7 +122,59 @@ button, input, select, textarea {
     color: #000000;
     text-shadow: none;
 }
+/*  */
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
 
+::before, ::after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: "SUIT", "UI Frip", "Noto Sans KR", Helvetica, Arial, sans-serif;
+}
+body.fontLoaded {
+    font-family: "SUIT", "UI Frip", "Noto Sans KR", Helvetica, Arial, sans-serif;
+}
+
+svg{
+    border-style: none;
+}
+
+hr {
+    height: 0;
+    overflow: visible;
+}
+
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+button, input {
+    overflow: visible;
+}
+
+button, select {
+    text-transform: none;
+}
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+img {
+    border-style: none;
+}
+p, label {
+    margin: 0px;
+}
+
+b, strong {
+    font-weight: bolder;
+}
 
 #app{
     background-color: white;
@@ -116,13 +225,13 @@ div.App{
     min-height: 100vh;
 }
 
-header.GlobalNavigationBar_Wrapper{
+header.GlobalNavigationBar-Wrapper{
     width: 100%;
     border-bottom: 1px solid rgb(238, 238, 238);
     z-index: 300;
 }
 
-section.GlobalNavigationBar_02{
+section.GlobalNavigationBar-TopNavContainer{
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -132,7 +241,7 @@ section.GlobalNavigationBar_02{
     background-color: rgb(244, 244, 244);
 }
 
-div.GlobalNavigationBar_03{
+div.GlobalNavigationBar-TopNavMenuWrapper{
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -143,30 +252,46 @@ div.GlobalNavigationBar_03{
     padding: 6px 20px;
 }
 
-div.GlobalNavigationBar_04{
+div.GlobalNavigationBar-TopNavMenuNodeListWrapper{
     display: flex;
     -webkit-box-align: center;
     align-items: center;
 }
 
-div.GlobalNavigationBar_05{
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
+a.Link1{
+    margin-left: 0px;
 }
 
-div.GlobalNavigationBar_04 div.TopMenu{
+a.Link2{
+    margin-left: 20px;
+}
+
+a.Link3{
+    margin-left: 20px;
+}
+
+a.Link4{
+    margin-left: 20px;
+}
+
+div.TopMenu{
     color: rgb(119, 119, 119);
     font-size: 10px;
     line-height: 14px;
     letter-spacing: -0.3px;
+    font-family: "SUIT";
+    src: url('font/SUIT-Medium.otf') format('opentype');
+
 }
 
-div.Link1_1, div.Link2_1, div.Link3_1, div.Link4_1 {
+div.Link1_1{
     color: rgb(119, 119, 119);
     font-size: 10px;
     line-height: 14px;
     letter-spacing: -0.3px;
+    font-family: "SUIT";
+    src: url('font/SUIT-Medium.otf') format('opentype');
+
 }
 
 section.MainNavigationBar{
@@ -223,7 +348,7 @@ div.IconWrapper{
     height: 34px;
 }
 
-span.Mainrabel{
+span.Mainlabel{
     display: block;
     margin-top: 3px;
     font-size: 10px;
@@ -231,6 +356,9 @@ span.Mainrabel{
     letter-spacing: -0.3px;
     text-align: center;
     color: rgb(170, 170, 170);
+    font-family: "SUIT";
+    src: url('font/SUIT-Medium.otf') format('opentype');
+
 }
 
 a.Styledlink{
@@ -255,7 +383,7 @@ div.SearchBar_Wrapper{
     width: 100%;
 }
 
-div.SearchBar_Wrapper form.SearchForm{
+form.SearchForm{
     position: relative;
     display: flex;
     -webkit-box-align: center;
@@ -275,11 +403,13 @@ img.SearchBar_Image{
 
 input.SearchIn{
     width: 100%;
-    color: rgb(51, 51, 51);
+    color: rgb(170, 170, 170);
     height: 24px;
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
+    font-family: "SUIT";
+    src: url('font/SUIT-Medium.otf') format('opentype'); 
 }
 
 div.rightsection{
@@ -305,16 +435,6 @@ div.IconWrapper_2{
     height: 34px;
 }
 
-span.MainLavel{
-    display: block;
-    margin-top: 3px;
-    font-size: 10px;
-    line-height: 14px;
-    letter-spacing: -0.3px;
-    text-align: center;
-    color: rgb(170, 170, 170);
-}
-
 div.CurrentIndex{
     display: flex;
     flex-direction: column;
@@ -334,10 +454,22 @@ div.CurrentIndex-Header{
     border-bottom: 1px solid rgb(238, 238, 238);
 }
 
+div.CurrentIndex-Header-Top{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap:0px;
+}
+
+div.CurrentIndex-Header-Top img{
+    margin-bottom:2.35px;
+}
+
 span.CurrentIndex-Title{
     color: rgb(51, 61, 75);
     font-weight: bold;
     font-size: 24px;
+    font-family: "SUIT";
 }
 
 button.CurentIndex-TooltipButton{
@@ -370,6 +502,9 @@ div.Feed-typeselect-container-FeedTypeBox-1{
     color: rgb(255, 255, 255);
     cursor: pointer;
     font-size: 14px;
+    font-family: "SUIT";
+    src: url('font/SUIT-Medium.otf') format('opentype');
+
 }
 
 div.Feed-typeselect-container-FeedTypeBox-2{
@@ -384,19 +519,11 @@ div.Feed-typeselect-container-FeedTypeBox-2{
     color: rgb(170, 170, 170);
     cursor: pointer;
     font-size: 14px;
+    font-family: "SUIT";
+    src: url('font/SUIT-Medium.otf') format('opentype');
+
 }
-
-
-
-
-
-
-
-
-
-
-
-div.Fade-Wrapper{
+div.fade-wrapper{
     width: auto;
     height: auto;
     transition: opacity 200ms ease-in-out 0s;
@@ -404,4 +531,222 @@ div.Fade-Wrapper{
     opacity: 0;
     min-width: 0px;
     min-height: 1px;
+}
+svg.prev-slider{
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    z-index: 4;
+    border: 1px solid red;
+}
+svg.next-slider{
+    position: absolute;
+    top:20%;
+    right: 5%;
+    z-index: 1;
+}
+div.current-index-feed-list-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+div.current-index-feed-list-wrapper > div{
+    max-width: 385px;
+    width: 100%;
+    padding: 30px 20px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    border-left: 1px solid rgb(238, 238, 238);
+    margin-left: -1px;
+}
+div.current-profile-wrapper{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+div.current-index-style-profile{
+    margin-bottom: 15px;
+}
+div.current-profile-user-profile-wrapper{
+    display: flex;
+}
+div.current-profile-profile-image-wrapper{
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+}
+div.image-wrapper{
+    min-height: 1px;
+}
+img.image-styled-image-loader{
+    display: none !important;
+}
+img.image-styled-image{
+    display: initial;
+    border-radius: 36px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+div.current-profile-user-text-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+p.current-profile-name{
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    color: rgb(78, 89, 104);
+}
+div.current-profile-time{
+    font-size: 12px;
+    line-height: 12px;
+    color: rgb(142, 151, 163);
+}
+button.current-profile-more-button{
+    cursor: pointer;
+    justify-items: flex-end;
+}
+div.current-image-banner-wrapper{
+    border-radius: 20px;
+    overflow: hidden;
+    background-image: url("./climate_companion_card.webp");
+    background-color: rgb(242, 243, 246);
+    cursor: pointer;
+    backface-visibility: hidden;
+    transform: translate3d(0px, 0px, 0px);
+}
+div.current-image-banner-wrapper div{
+    padding-bottom: initial;
+    height: 100%;
+}
+div.image-slider-styled-slider{
+    visibility: hidden;
+}
+
+div.current-image-banner-wrapper.slick-initialized{
+    visibility: visible;
+}
+div.current-feed-image-image-loader-wrapper{
+    display: none;
+}
+div.current-feed-image-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+span.prev-slider{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)rotate(180deg);
+    left: 0;
+}
+span.next-slider{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+a.product-link-wrapper {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 45px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(5, 116, 230);
+    padding: 0px 20px;
+    border: 1px solid rgb(229, 231, 234);
+    border-radius: 20px;
+    cursor: pointer;
+}
+a.current-index-styled-product-link{
+    margin-top: 10px;
+}
+div.product-link-text{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 700;
+}
+div.product-link-text svg{
+    margin-right: 10px;
+}
+div.feed-tag-container-wrapper{
+    font-size: 16px;
+    color: rgb(78, 89, 104);
+    white-space: pre-line;
+}
+div.current-index-styled-description{
+    margin-top: 18px;
+    margin-bottom: 21px;
+    letter-spacing: -0.4px;
+}
+
+span.current-description-styled-span-line-clamp{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 48px;
+
+}
+button.current-description-expand-button{
+    padding: 0px;
+    color: rgb(171, 182, 196);
+}
+div.feed-tag-desciption-wrapper{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 21px
+}
+div.feed-tag-container-feed-tag-box-1{
+    padding: 6px 9px;
+    border-radius: 20px;
+    border: 1px solid rgb(141, 87, 255);
+    color: rgb(141, 87, 255);
+}
+
+div.feed-tag-container-feed-tag-box-2{
+    padding: 6px 9px;
+    border-radius: 20px;
+    border: 1px solid rgb(119, 119, 119);
+    color: rgb(119, 119, 119);
+}
+
+div.current-action-group-wrapper{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    color: rgb(78, 89, 104);
+}
+div.current-action-group-wrapper span{
+    margin-left: 8px;
+    font-weight: 700;
+}
+button.current-action-group-like-button{
+    height: 24px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    margin-right: 20px;
+}
+a.current-action-group-reply-link{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
 }
