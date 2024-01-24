@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "SUIT";
+    src: url('font/SUIT-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "SUIT_Bold";
+    src: url('font/SUIT-Bold.otf') format('opentype');
+}
+
 * {
     outline: none;
     font-family: inherit;
@@ -43,6 +53,10 @@ a, area, button, input, label, select, textarea, [tabindex] {
 a, area, button, input, label, select, textarea, [tabindex] {
     -ms-touch-action: manipulation;
     touch-action: manipulation;
+}
+
+button {
+    cursor: pointer;
 }
 
 button, select {
@@ -1226,6 +1240,7 @@ main.product-detail-page-wrapper {
     border-radius: 5px;
 }
 
+/* '지도' 텍스트가 가운데로 정렬될 수 있게 스타일 작성 */
 .place-text-area {
     width: 100%;
     height: 100%;
@@ -1234,4 +1249,238 @@ main.product-detail-page-wrapper {
     align-items: center;
     font-weight: bold;
     font-size: 30px;
+}
+
+/*
+    (불)포함 사항, 준비물 정보 섹션 전반에
+    필요한 스타일 작성
+*/
+.pre-info {
+    padding: 40px 0px;
+    border-top: 1px solid rgb(238, 238, 238);
+    border-bottom: none;
+}
+
+
+/*
+    (불)포함 사항, 준비물 정보 섹션 내
+    각 article 태그에 적용할 스타일 작성
+*/
+.pre-info > article {
+    margin: 0px 0px 32px;
+}
+
+/* 단, 마지막 article 태그는 margin 없음 */
+.pre-info > article:last-child {
+    margin: 0
+}
+
+/* 위 항목들의 제목란에 사용할 스타일 작성 */
+.pre-info-article-header {
+    margin: 0px 0px 16px;
+    padding: 0px;
+}
+
+/* 각 항목에서 내부 요소들을 묶을 때 사용할 스타일 작성 */
+.stuff-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 287px;
+    padding: 0px;
+}
+
+/* 각 항목의 내부 요소들에 공통적으로 사용할 스타일 작성 */
+.stuff-container > span {
+    margin: 0px 9px 12px 0px;
+}
+
+/* 포함 사항에 사용할 스타일 작성 */
+.included-tag {
+    padding: 6px 11px;
+    color: rgb(0, 69, 24);
+    border: 1px solid rgb(155, 212, 145);
+    border-radius: 20px;
+    background-color: rgb(251, 255, 245);
+}
+
+/* 불포함 사항에 사용할 스타일 작성 */
+.excluded-tag {
+    padding: 6px 11px;
+    color: rgb(78, 0, 0);
+    border: 1px solid rgb(212, 153, 145);
+    border-radius: 20px;
+    background-color: rgb(255, 249, 247);
+}
+
+/* 준비물에 사용할 스타일 작성 */
+.preperations {
+    padding: 6px 11px;
+    color: rgb(102, 102, 102);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* 1:1 문의 메뉴에 사용할 스타일 작성 */
+.inquiry {
+    line-height: 24px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 20px 20px 12px;
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+
+/*
+    유의 사항, 환불 정책 메뉴를 감싸는 공간에
+    공통으로 적용할 스타일 작성
+*/
+.notice-and-refund {
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* 유의 사항, 환불 정책 메뉴에 공통으로 적용할 스타일 작성 */
+.menu-container {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 20px 20px 12px;
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+
+/* 위 두 가지 메뉴의 아이콘이 들어갈 공간의 스타일 작성 */
+.menu-icon-container {
+    width: 7px;
+    height: 24px;
+    cursor: pointer;
+    /* opacity: 1;
+    transform: rotate(0deg);
+    transition: opacity 0.2s ease 0s, transform 0.5s ease 0s; */
+}
+
+
+/* 위 두 가지 메뉴의 화살표 아이콘 스타일 작성 */
+.menu-icon {
+    width: 100%;
+    height: 100%;
+    transform: rotate(90deg);
+}
+
+/* 화면 하단에 고정된 메뉴바의 스타일 작성 */
+.floating-action-bar-wrapper {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 12px 20px 24px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px -10px 30px -10px;
+    background-color: white;
+    z-index: 200;
+}
+
+/* 고정 메뉴바 안에 있는 버튼들을 감싸줄 공간의 스타일 작성 */
+.floating-button-wrapper {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px auto;
+    max-width: 768px;
+}
+
+/* 고정 메뉴바 안 찜하기 버튼의 위치를 맞추기 위한 스타일 작성 */
+.floating-wish-button {
+    padding: 0px;
+    margin-right: 20px;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+/* 찜하기 버튼 아래 숫자 텍스트의 스타일 작성 */
+.wish-button-count {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(51, 51, 51);
+    white-space: nowrap;
+    margin-top: -4px;
+}
+
+/* 고정 메뉴바 안 참여하기 버튼의 위치를 맞추기 위한 스타일 작성 */
+.floating-wish-button {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+/* 참여하기 버튼의 스타일 작성 */
+.involve-background {
+    width: 100%;
+    height: 56px;
+    line-height: 24px;
+    padding: 16px;
+    background-color: rgb(122, 41, 250);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    margin: 0px;
+}
+
+/* '참여하기' 글자의 배치 스타일 작성 */
+.involve-text {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+}
+
+/* 
+    화면 아래에 고정된 버튼 우상단의 둥근 버튼의
+    위치를 잡기위한 스타일 작성
+*/
+.floating-round-button-wrapper{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+
+
+/* 위의 버튼 내 요소들을 일정한 위치에 고정시키기 위한 스타일 작성 */
+.floating-round-button-layout-wrapper {
+    position: relative;
+    max-width: 768px;
+    width: 100%;
+    margin: 0px auto;
+}
+
+/* 버튼의 테두리 및 그림자 효과 등의 스타일 작성 */
+.round-scroll-top-button {
+    position: absolute;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    border-radius: 20px;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 8px 0px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    bottom: 116px;
+}
+
+/* 버튼 안에 들어갈 화살표 이미지의 스타일 작성 */
+.round-scroll-top-button img {
+    width: 24px;
 }
