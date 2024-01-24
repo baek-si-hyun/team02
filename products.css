@@ -61,9 +61,9 @@ button, input, select, textarea {
     margin: 0;
 }
 
-button, html [type="button"], [type="reset"], [type="submit"] {
+/* button, html [type="button"], [type="reset"], [type="submit"] {
     -webkit-appearance: button;
-}
+} */
 
 audio, canvas, iframe, img, svg, video {
     vertical-align: middle;
@@ -86,6 +86,15 @@ body.font-loaded {
 
 img {
     border-style: none;
+}
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+}
+
+p, label {
+    margin: 0px;
 }
 
 /* body.font-loaded 의 하위 요소 */
@@ -349,7 +358,7 @@ main.product-detail-page-wrapper {
     position: relative;
 }
 
-/* main 태그 부분 중앙에 오는 모든 요소들의 스타일 지정 */
+/* 특정 부분에 오는 요소들을 감싸는 공간의 스타일 지정 */
 .fade-wrapper {
     width: auto;
     height: auto;
@@ -493,17 +502,6 @@ main.product-detail-page-wrapper {
 
 .styled-image-loader {
     display: none !important;
-}
-
-/* 실제 사이트에 보일 이미지를 감쌀 클래스 */
-.inner-fade-wrapper {
-    width: auto;
-    height: auto;
-    transition: opacity 200ms ease-in-out 0s;
-    display: none;
-    opacity: 0;
-    min-width: 0px;
-    min-height: 1px;
 }
 
 .ratio-ratio {
@@ -725,4 +723,515 @@ main.product-detail-page-wrapper {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* 판매자 정보를 감쌀 공간의 스타일 작성 */
+.profile-content {
+    display: flex;
+    flex-flow: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* 판매자 이름을 감쌀 부분의 스타일 작성 */
+.host-name-wrapper {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    max-width: 212px;
+}
+
+/*  */
+.profile-nickname {
+    display: inline-flex;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.54px;
+    color: rgb(51, 51, 51);
+}
+
+/* 판매자 정보(상품, 후기, 찜)를 담을 공간의 스타일 작성 */
+.profile-stat {
+    margin-top: 2px;
+    color: rgb(170, 170, 170);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.36px;
+}
+
+/* 위 클래스를 사용한 태그 내 span 태그에는 아래의 스타일 적용*/
+.profile-stat > span {
+    color: rgb(221, 221, 221);
+    font-size: 10px;
+    vertical-align: top;
+    display: inline-block;
+    padding: 0px 6px;
+}
+
+/* 판매자 정보 옆의 찜 버튼을 감싸는 부분의 스타일 지정 */
+.wish-button {
+    width: 32px;
+    height: 32px;
+    line-height: normal;
+    padding: 0px;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* 찜하기 버튼에 그림자 효과 부여 */
+.wish-button > img {
+    filter: drop-shadow(rgba(0, 0, 0, 0.4) 1px 1px 3px);
+}
+
+/* 후기 섹션을 감쌀 공간의 스타일 작성 */
+.review-section-container {
+    padding: 0px;
+    border-top: 1px solid rgb(238, 238, 238);
+    border-bottom: none;
+}
+
+/* 아래에 있는 별점 파트의 위치를 맞추기 위한 스타일 작성 */
+.hidden-text {
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    border: 0px;
+}
+
+/* 리뷰 요약(별점)을 감쌀 공간의 스타일 작성 */
+.review-summary-wrapper {
+    padding: 57px 0px 24px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* 별점 및 요약이 들어간 공간의 스타일 작성 */
+.review-info-section {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+/* 별 이미지를 감쌀 공간의 스타일 작성 */
+.star-wrapper {
+    display: flex;
+    flex-flow: row;
+}
+
+/* 각 별 이미지 사이의 margin 조정 */
+.star-wrapper > img {
+    margin-right: 1px;
+}
+
+/* 평점 텍스트(숫자)를 표시할 부분의 스타일 작성 */
+.review-average {
+    margin: 0px 0px 0px 8px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+/* 평점 뒤에 오는 스타일 작성 */
+.review-average::after {
+    content: "•";
+    width: 3px;
+    height: 3px;
+    padding: 0px 6px;
+    color: rgb(119, 119, 119);
+}
+
+/* 후기 개수 텍스트의 스타일 작성 */
+.review-summary-count {
+    color: rgb(119, 119, 119);
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+}
+
+/* 별점 아래 텍스트의 스타일 지정 */
+.review-summary-comment {
+    color: rgb(51, 51, 51);
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.54px;
+    margin-top: 8px;
+}
+
+/* 상세 리뷰 섹션을 감싸는 공간의 스타일 작성 */
+.review-section-wrapper {
+    padding-top: 24px;
+    border-top: 1px solid rgb(244, 244, 244);
+    border-bottom: 1px solid rgb(244, 244, 244);
+    background-color: rgb(250, 250, 250);
+    overflow: hidden;
+}
+
+/*
+    상세 리뷰 이미지 및 텍스트,
+    리뷰 작성자 프로필 이미지 등을 감싸는 공간의 스타일 작성
+*/
+.review-card-list-wrapper {
+    margin-bottom: 12px;
+    padding: 0px 18px;
+}
+
+/*
+    위의 클래스를 사용한 태그 안에서 한 번 더 
+    감싸는 공간을 만들고, 스타일 작성
+*/
+.review-card-wrapper {
+    display: flex;
+    max-width: 720px;
+    width: 100%;
+}
+
+/* 상세 리뷰 이미지의 스타일 작성 */
+.review-card-image-section {
+    border-radius: 3px;
+    overflow: hidden;
+    min-height: 232px;
+    background-color: rgb(250, 250, 250);
+    width: 100%;
+    max-width: 326px;
+    margin-right: 24px;
+}
+
+/* 리뷰 이미지를 감싸는 공간의 스타일 작성 */
+.review-image-wrapper{
+    min-height: 1px;
+}
+
+/* 상세 리뷰 이미지의 위치를 조정하는 스타일 작성 */
+.review-ratio {
+    height: 0px;
+    position: relative;
+    width: 100%;
+    padding-top: 71.1656%;
+}
+
+/* 상세 리뷰 이미지에 대한 스타일 작성 */
+.review-styled-image {
+    display: initial;
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 리뷰 작성자 정보 및 텍스트가 담길 공간의 스타일 작성 */
+.review-card-info-section {
+    width: 100%;
+}
+
+/* 리뷰 작성자 프로필이 들어갈 공간의 스타일 작성 */
+.reviewer-profile-section {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+/* 리뷰 작성자의 프로필 이미지가 들어갈 공간의 스타일 작성 */
+.reviewer-profile-image {
+    width: 40px;
+    height: 40px;
+}
+
+/* 리뷰 작성자 이미지를 감싸는 태그의 스타일 작성 */
+.reviewer-image-wrapper {
+    min-height: 1px;
+}
+
+/* 리뷰 작성자 프로필 이미지의 스타일 작성 */
+.reviewer-styled-image {
+    display: initial;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 리뷰 작성자의 닉네임을 표시할 공간의 스타일 작성 */
+.reviewer-info {
+    margin-left: 9px;
+}
+
+/* 리뷰 작성자 닉네임(텍스트)의 스타일 작성 */
+.reviewer-name {
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+
+/* 리뷰 작성자 정보와 리뷰 사이 공간을 띄워주기 위한 스타일 작성 */
+.review-info-spacing {
+    color: rgb(170, 170, 170);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.36px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+
+/* 작성한 리뷰란의 스타일 작성 */
+.review-content {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: rgb(51, 51, 51);
+    letter-spacing: -0.42px;
+    margin-bottom: 22px;
+    word-break: break-all;
+    font-size: 14px;
+    line-height: 22px;
+    height: 66px;
+}
+
+/* 리뷰의 좋아요 버튼이 들어가는 공간의 스타일 작성 */
+.review-like-button {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 36px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+    color: rgb(51, 51, 51);
+    border: 1px solid rgb(221, 221, 221);
+}
+
+/* 좋아요 버튼 이미지의 스타일 작성 */
+.review-like-button img {
+    width: 15px;
+    margin-right: 6px;
+}
+
+/* 후기 더보기란을 감쌀 공간의 스타일 작성 */
+.review-section-link-wrapper {
+    padding-top: 20px;
+}
+
+/* 후기 더보기 하이퍼링크의 스타일 작성 */
+.review-styled-link {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(0, 117, 239);
+    height: 56px;
+    border-top: 1px solid rgb(244, 244, 244);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+}
+
+/* 위 하이퍼링크 태그 안 img(파란 화살표)의 스타일 작성 */
+.review-styled-link img {
+    width: 12px;
+    margin-left: 2px;
+}
+
+/*
+    프립 정보, 소개, 진행하는 장소 섹션 및
+    문의, 정책 메뉴가 포함된 섹션 모두에 같은 스타일 적용
+*/
+.misc-section-container {
+    padding: 40px 0px;
+    border-top: 1px solid rgb(238, 238, 238);
+    border-bottom: none;
+}
+
+/* article 태그 내 제목 부분의 스타일 작성 */
+.article-header {
+    margin: 0px 0px 24px;
+    padding: 0px;
+}
+
+/* article 제목의 스타일 작성 */
+.article-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0;
+}
+
+/* article 정보가 담긴 공간의 스타일 작성 */
+.info-container {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* .info-container 클래스 요소 내 div 태그에 스타일 적용 */
+.info-container > div {
+    display: flex;
+    margin: 0px 0px 12px;
+}
+
+/* 단, 그 중 마지막 div는 margin을 0으로 설정  */
+.info-container > div:last-child {
+    margin: 0px;
+}
+
+/* .info-container 클래스 내 div > dt 태그에 스타일 적용 */
+.info-container > div > dt {
+    width: 76px;
+    color: rgb(153, 153, 153);
+}
+
+/* .info-container 클래스 내 div > dt 태그에 스타일 적용 */
+.info-container > div > dd {
+    margin: 0px;
+}
+
+/* 프립 소개 섹션 전반에 사용할 스타일 작성 */
+.introduce-section-wrapper {
+    min-height: 1px;
+}
+
+/* 프립 소개 섹션 내 article 태그의 제목 부분의 스타일 작성 */
+.introduce-article-header {
+    margin: 0 0 40px;
+    padding: 0;
+}
+
+/* 프립 소개 이미지를 담을 공간의 스다일 지정 */
+.description-container {
+    margin: 0px 0px 82px;
+}
+
+/*
+    위 클래스를 적용한 태그보다 하위에 있는
+    .product-description 클래스가 적용된 요소의 스타일 작성 */
+.description-container > .product-description {
+    height: 657px;
+    overflow: hidden;
+}
+
+/* 상품 소개 항목의 스타일 작성 */
+.product-description {
+    padding: 0 20px;
+    margin: 0;
+}
+
+/*
+    .product-description 클래스보다 하위에 있는 태그에,
+    종류별로 다르게 적용할 스타일 작성
+*/
+.product-description {
+    padding: 0 20px;
+    margin: 0;
+}
+
+.product-description img {
+    width: calc(100% + 40px);
+    max-width: calc(100% + 40px);
+    margin-left: -20px;
+}
+
+.product-description li {
+    list-style-position: inside;
+}
+
+.product-description p {
+    margin: 0;
+}
+
+.product-description span.fr-emoticon.fr-emoticon-img {
+    min-width: 20px;
+    min-height: 20px;
+    display: inline-block;
+}
+
+/* 상세정보 더보기 버튼이 들어갈 공간의 스타일 작성 */
+.desc-button-container {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+/* 상세정보 더보기 버튼의 스타일 작성 */
+.more-button {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 327px;
+    height: 56px;
+    border: 1.5px solid rgb(17, 17, 17);
+}
+
+/* '상세정보 더보기' 텍스트 옆, 화살표 아이콘을 담을 공간의 스타일 작성 */
+.more-button-icon-container {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    transform: rotate(0deg);
+}
+
+/* 진행하는 장소 섹션 내 article 제목의 스타일 작성 */
+.place-article-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0 0 16px;
+}
+
+/*
+    .place-section-container 클래스를 사용한 요소보다
+    하위에 있는 모든 div 태그에 스타일 적용
+*/
+.place-section-container > div {
+    margin: 0px 0px 68px;
+}
+
+/* 단, 마지막 요소는 margin 옵션을 다르게 적용 */
+.place-section-container > div:last-child {
+    margin: 0px 0px 20px;
+}
+
+/* 지도가 표시될 공간의 스타일 지정 */
+.place-container {
+    width: 100%;
+    height: 249.6px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 5px;
+}
+
+.place-text-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
 }
