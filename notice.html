@@ -5,9 +5,316 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://www.frip.co.kr/favicon.ico?v=2" type="image/x-icon">
     <link rel="stylesheet" href="notice.css">
+    <!-- <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet"> -->
     <title>공지사항 -프립(FRIP) : 세상 모든 취미 여가의 시작</title>
+    <style>
+        article,
+        aside,
+        details, /* 1 */
+        figcaption,
+        figure,
+        footer,
+        header,
+        main, /* 2 */
+        menu,
+        nav,
+        section,
+        summary { /* 1 */
+            display: block;
+        }
+
+        audio,
+        canvas,
+        progress,
+        video {
+            display: inline-block;
+        }
+
+        audio:not([controls]) {
+            display: none;
+            height: 0;
+        }
+
+        template, /* 1 */
+        [hidden] {
+            display: none;
+        }
+
+        *,
+        ::before,
+        ::after {
+            background-repeat: no-repeat; /* 1 */
+            box-sizing: inherit; /* 2 */
+        }
+
+        ::before,
+        ::after {
+            text-decoration: inherit; /* 1 */
+            vertical-align: inherit; /* 2 */
+        }
+
+        html {
+            box-sizing: border-box; /* 1 */
+            cursor: default; /* 2 */
+            font-family: sans-serif; /* 3 */
+            line-height: 1.5; /* 3 */
+            -ms-text-size-adjust: 100%; /* 4 */
+            -webkit-text-size-adjust: 100%; /* 5 */
+        }
+
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: .67em 0;
+        }
+
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: monospace, monospace; /* 1 */
+            font-size: 1em; /* 2 */
+        }
+
+        hr {
+            height: 0; /* 1 */
+            overflow: visible; /* 2 */
+        }
+
+        nav ol,
+        nav ul {
+            list-style: none;
+        }
+
+        abbr[title] {
+            border-bottom: 1px dotted; /* 1 */
+            text-decoration: none; /* 2 */
+        }
+
+        b,
+        strong {
+            font-weight: inherit;
+        }
+
+        b,
+        strong {
+            font-weight: bolder;
+        }
+
+        dfn {
+            font-style: italic;
+        }
+
+        mark {
+            background-color: #ffff00;
+            color: #000000;
+        }
+
+        progress {
+            vertical-align: baseline;
+        }
+
+        small {
+            font-size: 83.3333%;
+        }
+
+        sub,
+        sup {
+            font-size: 83.3333%; /* 1 */
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+        sub {
+            bottom: -.25em;
+        }
+
+        sup {
+            top: -.5em;
+        }
+
+        ::-moz-selection {
+            background-color: #b3d4fc; /* 1 */
+            color: #000000; /* 1 */
+            text-shadow: none;
+        }
+
+        ::selection {
+            background-color: #b3d4fc; /* 1 */
+            color: #000000; /* 1 */
+            text-shadow: none;
+        }
+
+        audio,
+        canvas,
+        iframe,
+        img,
+        svg,
+        video {
+            vertical-align: middle;
+        }
+
+        img {
+            border-style: none;
+        }
+
+        svg {
+            fill: currentColor;
+        }
+
+        svg:not(:root) {
+            overflow: hidden;
+        }
+
+        a {
+            background-color: transparent; /* 1 */
+            -webkit-text-decoration-skip: objects; /* 2 */
+        }
+
+        a:hover {
+            outline-width: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            background-color: transparent; /* 1 */
+            border-style: none; /* 1 */
+            color: inherit; /* 1 */
+            font-size: 1em; /* 1 */
+            margin: 0; /* 3 */
+        }
+
+        button,
+        input { /* 1 */
+            overflow: visible;
+        }
+
+        button,
+        select { /* 1 */
+            text-transform: none;
+        }
+
+        button,
+        html [type="button"], /* 1 */
+        [type="reset"],
+        [type="submit"] {
+            -webkit-appearance: button; /* 2 */
+        }
+
+        ::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+
+        :-moz-focusring {
+            outline: 1px dotted ButtonText;
+        }
+
+        fieldset {
+            border: 1px solid #c0c0c0;
+            margin: 0 2px;
+            padding: .35em .625em .75em;
+        }
+
+        legend {
+            display: table; /* 1 */
+            max-width: 100%; /* 1 */
+            padding: 0; /* 2 */
+            white-space: normal; /* 1 */
+        }
+
+        textarea {
+            overflow: auto; /* 1 */
+            resize: vertical; /* 2 */
+        }
+
+        [type="checkbox"],
+        [type="radio"] {
+            padding: 0;
+        }
+
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto;
+        }
+
+        [type="search"] {
+            -webkit-appearance: textfield; /* 1 */
+            outline-offset: -2px; /* 2 */
+        }
+
+        ::-webkit-search-cancel-button,
+        ::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        ::-webkit-input-placeholder {
+            color: inherit;
+            opacity: .54;
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button; /* 1 */
+            font: inherit; /* 2 */
+        }
+
+        [aria-busy="true"] {
+            cursor: progress;
+        }
+
+        [aria-controls] {
+            cursor: pointer;
+        }
+
+        [aria-disabled] {
+            cursor: default;
+        }
+
+        a,
+        area,
+        button,
+        input,
+        label,
+        select,
+        textarea,
+        [tabindex] {
+            -ms-touch-action: manipulation; /* 1 */
+            touch-action: manipulation;
+        }
+
+        [hidden][aria-hidden="false"] {
+            clip: rect(0, 0, 0, 0);
+            display: inherit;
+            position: absolute;
+        }
+
+        [hidden][aria-hidden="false"]:focus {
+            clip: auto;
+        }
+    </style>
 </head>
 <body>
+    <div class="layout-top-banner-wrapper">
+        <div class="layout-top-banner-content">
+            <a href="#">
+                <img src="https://www.frip.co.kr/5705523422ddaa37a98deb313bbe423c.jpg" alt="layout-top-banner">
+            </a>
+            <button class="layout-top-banner-close-button">
+                <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 18 18'> <path stroke='#fff' stroke-width='1.5' d='M1 1l16 16M1 17L17 1'/> </svg>
+            </button>
+        </div>
+    </div>
     <header class="global-navigation-bar-wrapper">
         <section class="global-navigation-bar-top-nav-container">
             <div class="global-navigation-bar-top-nav-menu-wrapper">
@@ -20,13 +327,13 @@
                     <a href="https://www.frip.co.kr/intro?redirectPath=%2Fnotices" class="with-link-style">
                         <div class="global-navigation-bar-top-nav-menu">회원가입</div>
                     </a>
-                    <a href="https://www.frip.co.kr/login?redirectPath=%2Fnotices" class="with-link-style">
+                    <a href="https://www.frip.co.kr/login?redirectPath=%2Fnotices" class="with-link-style2">
                         <div class="global-navigation-bar-top-nav-menu">로그인</div>
                     </a>
-                    <a href="https://www.frip.co.kr/help" class="with-link-style">
+                    <a href="https://www.frip.co.kr/help" class="with-link-style2">
                         <div class="global-navigation-bar-top-nav-menu">자주 묻는 질문</div>
                     </a>
-                    <a href="https://www.frip.co.kr/notices" class="with-link-style">
+                    <a href="https://www.frip.co.kr/notices" class="with-link-style2">
                         <div class="global-navigation-bar-top-nav-menu">공지사항</div>
                     </a>
                 </div>
@@ -35,20 +342,348 @@
         <section class="global-navigation-bar-main-nav-container">
             <div class="global-navigation-bar-main-nav-menu-wrapper">
                 <div class="global-navigation-bar-main-nav-left-section">
-                    <a href="">
-                        <div>
-                            <div>
-                                <img src="" alt="">
+                    <a class="with-link-style" href="https://www.frip.co.kr/category">
+                        <div class="global-navigation-bar-main-nav-menu">
+                            <div class="global-navigation-bar-icon-wrapper">
+                                <img src="data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Crect x='11.5' y='10.5' width='7' height='7' fill='%23AAAAAA'/%3E %3Crect x='1.5' y='10.5' width='7' height='7' fill='%23AAAAAA'/%3E %3Crect x='1.5' y='0.5' width='7' height='7' fill='%23AAAAAA'/%3E %3Crect x='11.5' y='0.5' width='7' height='7' fill='%23AAAAAA'/%3E %3C/svg%3E" alt="카테고리-icon">
                             </div>
+                            <span class="global-navigation-bar-main-label">카테고리</span>
                         </div>
                     </a>
-                    <span></span>
-                    <a href=""></a>
-                    <div></div>
+                    <span class="global-navigation-bar-pipe"></span>
+                    <a class="with-link-style" href="https://www.frip.co.kr/">
+                        <img class="butSez" src="notice_images/mainlogo.svg" alt="">
+                    </a>
+                    <div class="global-navigation-bar-searchbar-wrapper">
+                        <div class="seach-bar-wrapper">
+                            <div>
+                                <form class="search-form">
+                                    <img class="magnifier" src="notice_images/search.svg" alt="">
+                                    <input type="search" placeholder="지금 생각나는 취미를 검색하세요" class="search-input"></input>
+                                    </img>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="global-navigation-bar-main-nav-right-section"></div>
+                <div class="global-navigation-bar-main-nav-right-section">
+                    <a class="with-link-style" href="https://www.frip.co.kr/social-feeds">
+                        <div class="global-navigation-bar-main-nav-menu">
+                            <div class="global-navigation-bar-icon-wrapper">
+                                <img  src="notice_images/feed.svg" alt="피드.icon">
+                            </div>
+                            <span class="global-navigation-bar-main-label">피드</span>
+                        </div>
+                    </a>
+                    <a class="with-link-style" href="https://www.frip.co.kr/intro?redirectPath=%2Fmy%2Fwishes%2Ffrip">
+                        <div class="global-navigation-bar-main-nav-menu">
+                            <div class="global-navigation-bar-icon-wrapper">
+                                <img  src="notice_images/heart.svg" alt="찜.icon">
+                            </div>
+                            <span class="global-navigation-bar-main-label">찜</span>
+                        </div>
+                    </a>
+                    <a class="with-link-style" href="https://www.frip.co.kr/intro?redirectPath=%2Fmy%2Ffrips%2Fupcoming">
+                        <div class="global-navigation-bar-main-nav-menu">
+                            <div class="global-navigation-bar-icon-wrapper">
+                                <img  src="notice_images/myinfo.svg" alt="마이.icon">
+                            </div>
+                            <span class="global-navigation-bar-main-label">마이</span>
+                    </a>
+                </div>
             </div>
         </section>
     </header>
+    <div class="page-wrapper">
+        <h1 style="font-size: 24px"  class="left-page-title">공지사항</h1>
+        <div class="tap-label-wrapper">
+            <span class="tap-labels-tap-1">전체</span>
+            <span class="tap-labels-tap-2">공지</span>
+            <span class="tap-labels-tap-2">이벤트</span>
+            <span class="tap-labels-tap-2">일반</span>
+        </div>
+        <div class="fade-wrapper" style="opacity: 1; display: block;"> 
+            <ul class="notice-page-notice-list-wrapper">
+                <li>
+                    <div class="notice-entity-wrapper-top">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">신정(1/1) 고객센터 운영시간 안내</div>
+                        <div class="notice-entity-date">2023-12-29 09:55</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">성탄절(12/25) 고객센터 운영시간 안내</div>
+                        <div class="notice-entity-date">2023-12-22 13:58</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">전사 휴무일(11/28) 고객센터 운영시간 안내</div>
+                        <div class="notice-entity-date">2023-11-21 10:43</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">9/27(수) ~ 10/9(월) 프립 고객센터 운영시간 안내</div>
+                        <div class="notice-entity-date">2023-09-21 13:35</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">광복절(8/15) 고객센터 운영시간 안내</div>
+                        <div class="notice-entity-date">2023-08-08 16:05</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">현충일(6/6) 고객센터 운영시간 안내</div>
+                        <div class="notice-entity-date">2023-06-01 08:31</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">코로나19 확진자 관련 환불 규정 변경 안내 (6/1 ~ )</div>
+                        <div class="notice-entity-date">2023-05-30 09:25</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">부처님 오신 날(5/27)과 대체 휴무일(5/29) 고객센터 운영시간 안내</div>
+                        <div class="notice-entity-date">2023-05-24 08:52</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">이용 약관 개정 안내</div>
+                        <div class="notice-entity-date">2023-05-24 08:49</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">5월 17일 (수요일) 고객센터 단축 운영 안내</div>
+                        <div class="notice-entity-date">2023-05-12 09:53</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">위치기반 서비스 이용약관 변경 안내</div>
+                        <div class="notice-entity-date">2023-04-26 14:47</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">근로자의 날(5/1), 어린이날(5/5) 고객센터 운영시간 안내</div>
+                        <div class="notice-entity-date">2023-04-26 09:34</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">삼일절(3/1) 고객센터 운영시간 안내</div>
+                        <div class="notice-entity-date">2023-02-23 13:21</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">설 연휴 기간 (1/21~1/24) 고객센터 운영시간 안내</div>
+                        <div class="notice-entity-date">2023-01-18 11:31</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">공휴일(12/25, 1/1) 고객센터 단축 운영 안내</div>
+                        <div class="notice-entity-date">2022-12-22 13:26</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">프립톡 서비스 종료 안내 (11/23 종료)</div>
+                        <div class="notice-entity-date">2022-11-17 14:41</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">고객센터 상담 서비스 일부 변경 안내</div>
+                        <div class="notice-entity-date">2022-10-20 10:15</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">카카오톡 연계 서비스 장애 관련 안내 (10/17 18:00 정상화)</div>
+                        <div class="notice-entity-date">2022-10-15 18:34</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">10월 공휴일 (10/3, 9, 10) 고객센터 운영시간 안내</div>
+                        <div class="notice-entity-date">2022-09-28 09:42</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notice-entity-wrapper">
+                        <div class="notice-entity-expanded">공지</div>
+                        <div class="notice-entity-title">9월 23일 (금요일) 고객센터 단축 운영 안내</div>
+                        <div class="notice-entity-date">2022-09-21 13:16</div>
+                    </div>
+                </li>
+            </ul>
+            <footer class="wrapper-pagination-wrapper">
+                <div class="pagination-button-group-prev">
+                    <button style="width: 40px; height: 40px; font-size: 18 ;" disabled class="button-page-style">
+                        <img src="notice_images/pagebuttondouble.svg" class="pagiantion-button-group-icon">
+                    </button>
+                    <button style="width: 40px; height: 40px; font-size: 18 ;" disabled class="button-page-style">
+                        <img src="notice_images/pagebuttonsingle.svg" class="pagiantion-button-group-icon">
+                    </button>
+                    </div>
+                    <button width="40px" height="40px" color="#3397ff" font-size="18px" font-weight="bold" class="button-page-style-a">1</button>
+                    <button width="40px" height="40px" color="black" font-size="18px" font-weight="normal" class="button-page-style-b">2</button>
+                    <button width="40px" height="40px" color="black" font-size="18px" font-weight="normal" class="button-page-style-b">3</button>
+                    <button width="40px" height="40px" color="black" font-size="18px" font-weight="normal" class="button-page-style-b">4</button>
+                    <button width="40px" height="40px" color="black" font-size="18px" font-weight="normal" class="button-page-style-b">5</button>
+                    <button width="40px" height="40px" color="black" font-size="18px" font-weight="normal" class="button-page-style-b">6</button>
+                    <button width="40px" height="40px" color="black" font-size="18px" font-weight="normal" class="button-page-style-b">7</button>
+                    <button width="40px" height="40px" color="black" font-size="18px" font-weight="normal" class="button-page-style-b">8</button>
+                    <button width="40px" height="40px" color="black" font-size="18px" font-weight="normal" class="button-page-style-b">9</button>
+                    <button width="40px" height="40px" color="black" font-size="18px" font-weight="normal" class="button-page-style-b">10</button>
+                    <div class="pagination-button-group-next">
+                        <button style="width: 40px; height: 40px; font-size: 18 ;" disabled class="button-page-style-next">
+                            <img src="notice_images/nextpagebuttonsingle.svg" class="pagiantion-button-group-icon-next">
+                        </button>
+                        <button style="width: 40px; height: 40px; font-size: 18 ;" disabled class="button-page-style-next">
+                            <img src="notice_images/nextpagebuttondouble.svg" class="pagiantion-button-group-icon-next">
+                        </button>
+                    </div>
+            </footer>
+        </div>
+    </div>
+    <footer class="footer-wrapper">
+        <div class="footer-content-wrapper">
+            <div class="footer-nav-wrapper">
+                <a href="https://team.frip.co.kr/joinhost" target="_blank">호스트 지원</a>
+                <a href="https://team.frientrip.com/career" target="_blank">인재채용</a>
+                <a href="https://frip.notion.site/4a01fc99589f4f21a4a34289f3903fcc" target="_blank">제휴문의</a>
+            </div>
+            <div>
+                <div class="section-container">
+                    <strong class="section-title">고객센터</strong>
+                    <ul class="section-description-container">
+                        <li class="section-subject">
+                            <span class="section-subject-title">
+                                채팅상담
+                                : 
+                            </span>
+                            <a role="button" href="https://pf.kakao.com/_xbxmrqM" target="blank" class="section-chat-button">
+                                <img src="notice_images/talk.svg" alt="solid talk icon" class="section-talk-more-img">
+                                <span class="section-button-text">카카오톡 채널 프립</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section-container">
+                    <strong class="section-title">호스트 지원센터</strong>
+                    <ul class="section-description-container">
+                        <li class="section-subject">
+                            <span class="section-subject-title">
+                                채팅상담
+                                : 
+                            </span>
+                            <a role="button" href="https://pf.kakao.com/_NQxnQxd" target="blank" class="section-chat-button">
+                                <img src="notice_images/talk.svg" alt="solid talk icon" class="section-talk-more-img">
+                                <span class="section-button-text">카카오톡 채널 프립호스트</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="center-section-border-1"></div>
+                <div class="center-section-cs-content">
+                    <p>운영시간: 평일/주말 10:00 - 17:00 (점심 : 12:00 - 13:00)</p>
+                    <p>광고/제휴: contact@frientrip.com</p>
+                </div>
+                <div class="center-section-border-2"></div>
+                <div class="footer-company-header-wrapper">
+                    <div class="footer-header">frientrip</div>
+                </div>
+                <div class="footer-content">
+                    <div>
+                        <span>(주)프랜트립</span>
+                        <span class="footer-divider">|</span>
+                        <span>사업자 등록번호 : 261-81-04385</span>
+                        <br>
+                        <span>통신판매업신고번호 : 2016-서울성동-01088</span>
+                    </div>
+                    <div>
+                        <span>대표 : 임수열</span>
+                        <span class="footer-divider">|</span>
+                        <span>개인정보 관리 책임자 : 양사열</span>
+                        <br>
+                        <span>서울시 성동구 왕십리로 115 헤이그라운드 서울숲점 G703</span>
+                    </div>
+                    <p>㈜프렌트립은 통신판매중개자로서 거래당사자가 아니며, 호스트가 등록한 상품정보 및 거래에 대해 ㈜프렌트립은 일체의 책임을 지지 않습니다.</p>
+                    <p>
+                        NICEPAY 안전거래 서비스 : 고객님의 안전거래를 위해 현금 결제 시, 저희 사이트에서 가입한 구매안전 서비스를 이용할 수 있습니다. 
+                        <a target="blank" href="https://pg.nicepay.co.kr/issue/IssueEscrow.jsp?Mid=frientripm&CoNo=2618104385">가입확인</a>
+                    </p>
+                </div>
+                <div class="footer-contract-wrapper">
+                    <a href="https://www.frip.co.kr/static-info/agreement" class="with-link-style">
+                        <span>이용약관</span>
+                    </a>
+                    <a class="with-link-style" href="https://www.frip.co.kr/static-info/privacy">
+                        <span>개인정보 처리방침</span>
+                    </a>
+                    <a href="https://www.frip.co.kr/static-info/geoLocationAgreement" class="with-link-style">
+                        <span>위치기반 서비스 이용약관</span>
+                    </a>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.frientrip.frip&pli=1" target="_blank" class="footer-appdown">
+                    <img class="footer-app-icon" src="notice_images/playstore.png" alt="">
+                    <span>앱다운로드</span>
+                </a>
+            </div>
+            <div class="footer-footer-footer">
+                <div class="footer-icon-button-group">
+                    <a target="_blank" class="with-link-styled-A" href="https://www.instagram.com/frip_korea/">
+                        <img src="notice_images/instagram.svg" alt="프랩 인스타그램 링크" width="24px" height="24px">
+                    </a>
+                    <a target="_blank" class="with-link-styled-A" href="https://www.facebook.com/frientrip">
+                        <img src="notice_images/facebook.svg" alt="프랩 페이스북 링크" width="24px" height="24px">
+                    </a>
+                    <a target="_blank" class="with-link-styled-A" href="https://post.naver.com/frientrip">
+                        <img src="notice_images/navaer.svg" alt="프랩 네이버 포스트 링크" width="24px" height="24px">
+                    </a>
+                    <a target="_blank" class="with-link-styled-A" href="https://www.youtube.com/channel/UCgYVh2nh8nfC0wHEdkWLLZg?view_as=subscriber">
+                        <img src="notice_images/youtube.svg" alt="프랩 유튜브 링크" width="24px" height="24px">
+                    </a>
+                </div>
+                <div class="footer-icon-button-group-b">
+                    <a target="_blank" href="https://apps.apple.com/kr/app/%ED%94%84%EB%A6%BD-%EC%84%B8%EC%83%81-%EB%AA%A8%EB%93%A0-%EA%B2%BD%ED%97%98%EC%9D%98-%EC%8B%9C%EC%9E%91/id1066782203">
+                        <img src="notice_images/apple.svg" alt="프랩 앱스토어 링크" width="24px" height="24px">
+                    </a>
+                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.frientrip.frip">
+                        <img src="notice_images/googleplay.svg" alt="프랩 구글플레이 링크" width="24px" height="24px">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
