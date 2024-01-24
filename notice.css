@@ -1,14 +1,13 @@
 @font-face {
-    font-family: 'SUIT-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+    font-family: "SUIT";
+    src: url('font/SUIT-Bold.otf') format('opentype');
 }
 
 @font-face {
-    font-family: "SUIT";
-    src: url("font/SUIT-Bold.ttf") format("truetype");
+    font-family:"SUIT-MEDIUM";
+    src: url('font/SUIT-Medium.otf') format('opentype');
 }
+
 
 html, body {
     width: 100%;
@@ -16,6 +15,7 @@ html, body {
     color: black;
     word-break: normal;
     overflow-wrap: break-word;
+    
 }
 
 html {
@@ -354,7 +354,7 @@ div{
 
 .search-input{
     width: 100%;
-    color: rgb(51, 51, 51);
+    color: rgba(92, 92, 92, 0.50);
     height: 24px;
     font-size: 14px;
     line-height: 22px;
@@ -382,11 +382,16 @@ div{
     padding: 0px 20px;
     min-height: 1px;
 }
+.page-wrapper >* {
+    font-weight:lighter;
+}
+
 .left-page-title{
+    font-family: 'SUIT';
     margin: 30px 0px 20px;
     line-height: 24px;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 800;
 }
 .tap-label-wrapper{
     border-bottom: 1px solid rgb(238, 238, 238);
@@ -396,13 +401,13 @@ div{
 }
 
 .tap-labels-tap-1{
-    margin-right: 20px;
+    margin-right: 16.8px;
     color: rgb(51, 151, 255);
     cursor: pointer;
 }
 
 .tap-labels-tap-2{
-    margin-right: 20px;
+    margin-right: 16.8px;
     color: black;
     cursor: pointer;
 }
@@ -474,7 +479,8 @@ div{
     flex: 0 0 auto;
     margin-left: 10px;
     color: rgb(155, 155, 155);
-    font-size: 12px;
+    font-size: 11px;
+    letter-spacing: -0.3px;
     font-weight: normal;
 }
 
@@ -588,6 +594,7 @@ button:disabled{
 .footer-wrapper{
     padding: 40px 20px 96px;
     background-color: rgb(248, 248, 248);
+
 }
 
 .footer-content-wrapper{
@@ -626,6 +633,9 @@ button:disabled{
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
+}
+.bold{
+    font-weight: bold;
 }
 
 .section-description-container{
@@ -684,6 +694,18 @@ button:disabled{
     border-top: 1px solid rgb(238, 238, 238);
 }
 
+.center-section-cs-content{
+    color: rgb(119, 119, 119);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+}
+
+.center-section-cs-content p:first-child{
+    margin-top: 20px;
+}
+
 .center-section-border-2{
     margin-top: 30px;
     border-top: 1px solid rgb(238, 238, 238);
@@ -695,6 +717,7 @@ button:disabled{
 }
 
 .footer-header{
+    font-family: "SUIT";
     padding-bottom: 20px;
     font-size: 16px;
     font-weight: bold;
@@ -727,6 +750,7 @@ button:disabled{
 .footer-content p{
     line-height: 1.36;
     margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 .footer-content a{
@@ -792,7 +816,7 @@ button:disabled{
 }
 
 .footer-icon-button-group > * {
-    margin-left: 20px;
+    margin-left: 18px;
 }
 
 .with-link-styled-A{
@@ -809,5 +833,5 @@ button:disabled{
 }
 
 .footer-icon-button-group-b > * {
-    margin-left: 20px;
+    margin-left: 18px;
 }
